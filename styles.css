@@ -1,17 +1,16 @@
-/**
-Palette: https://scrimba.com/links/hometown-palette
-RED: #E63946
-LIGHT: #F1FAEE
-AQUA: #A8DADC
-LIGHT BLUE: #457B9D
-DARK BLUE: #1D3557
-
+/* INDONESIA PALETTE */
+/* RED: #C1121F;        deeper elegant red */
+/* WHITE: #F8F9FA;      /* soft white */
+/* GOLD: #D4A373;       batik / heritage accent */
+/* DARK: #1B263B;       /* dark navy for contrast */
+/* EARTH: #6B705C;      natural Indonesian tone */
 */
 
 body {
     margin: 0;
     text-align: center;
-    color: #F1FAEE;
+    color: #1B263B;
+    background-color: #F8F9FA;
 }
 
 img {
@@ -40,46 +39,71 @@ h1, h2, h3{
 }
 
 #visit {
-    background: #A8DADC;
+    background: #C1121F; /* red */
+    color: #F8F9FA;
     padding: 5px 15px;
     margin: 5px;
     border-radius: 5px;
-
 }
 
 #desc {
-    background: #1D3557;
+    background: rgba(27, 38, 59, 0.8); /* dark overlay */
+    color: #F8F9FA;
     padding: 5px 15px;
     margin: 5px;
     border-radius: 5px;
-
 }
 
 /* ACTIVITIES */
 
 #activities {
-    padding: 0;
-    margin: 0;
-    background-color: #A8DADC;
+    background-color: #F8F9FA; /* clean white */
     height: 343px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #activities h3 {
     margin: 0;
     padding-top: 20px;
+    color: #C1121F; /* red accent */
 }
 
 .activitiesimage{
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px auto;
     justify-content:space-around;
     align-items: center;
+    text-align: center;
 
 }
 
 #ttd{
-    color: black;
+    color: #1B263B;
     text-rendering:auto;
+}
+
+/* GUIDE */
+
+#guidecard {
+    width: 400px;
+    display: flex;
+    margin: 30px auto;
+    padding: 20px;
+    background: #FFFFFF;
+    border-bottom: 6px solid #C1121F; /* red accent */
+    border-radius: 12px;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#guidecard img {
+    border-radius: 2%;
+}
+
+#guidecard div {
+    text-align: center;
 }
