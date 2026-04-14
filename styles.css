@@ -6,13 +6,33 @@
 /* EARTH: #6B705C;      natural Indonesian tone */
 /*  */
 
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    line-height: 1.5;
+}
+
 body {
     margin: 0;
     text-align: center;
     color: #1B263B;
     background-color: #F8F9FA;
+    font-family: Arial, sans-serif;
 }
-
 img {
     width: 200px;
     border-radius: 50%;
@@ -21,20 +41,32 @@ img {
 /* HERO */
 #hero {
     margin: 0;
-    padding: 0;
+    min-height: 420px;
+    padding: 60px 20px;
     background-image: url("images/jakarta.webp");
-    background-size: 100% 100%;
-    background-position: 10%;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    height: 343px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
-h1, h2, h3{
-    text-shadow: 0 0 1px black;
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+#hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2, h3, h4, p {
     margin: 0;
 }
 
@@ -50,39 +82,68 @@ h1, h2, h3{
     background: rgba(27, 38, 59, 0.8); /* dark overlay */
     color: #F8F9FA;
     padding: 5px 15px;
-    margin: 5px;
+    margin-top: 10px;
     border-radius: 5px;
 }
 
 /* ACTIVITIES */
 
 #activities {
-    background-color: #F8F9FA; /* clean white */
-    height: 343px;
+    padding: 50px 20px 60px;
+    background-color: #F8F9FA;
+}
+
+#topthree {
+    color: #C1121F;
+    margin-bottom: 35px;
+    font-size: 1.8rem;
+    text-shadow: none;
+}
+
+.activitiesimage {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-#activities h3 {
-    margin: 0;
-    padding-top: 20px;
-    color: #C1121F; /* red accent */
+.activityimage {
+    background: #FFFFFF;
+    width: 300px;
+    padding: 20px 18px 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.activitiesimage{
-    display: flex;
-    margin-top: 10px auto;
-    justify-content:space-around;
-    align-items: center;
-    text-align: center;
-
+.activityimage:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
 }
 
-#ttd{
+.activityimage img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.ttd {
     color: #1B263B;
-    text-rendering:auto;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.activityimage p:last-child {
+    color: #6B705C;
+    line-height: 1.5;
+    font-size: 0.97rem;
 }
 
 /* GUIDE */
@@ -105,5 +166,5 @@ h1, h2, h3{
 }
 
 #guidecard div {
-    text-align: center;
+    text-align: left;
 }
