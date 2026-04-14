@@ -15,9 +15,11 @@ body {
 }
 
 img {
-    width: 100px;
+    width: 200px;
+    border-radius: 50%;
 }
 
+/* HERO */
 #hero {
     margin: 0;
     padding: 0;
@@ -53,14 +55,31 @@ h1, h2, h3{
 
 }
 
+/* ACTIVITIES */
+
 #activities {
     padding: 0;
     margin: 0;
     background-color: #A8DADC;
     height: 343px;
+    display: flex;
+    flex-direction:column;
 }
 
 #activities h3 {
     margin: 0;
     padding-top: 20px;
+}
+
+.activitiesimage{
+    display: flex;
+    margin-top: 20px;
+    justify-content:space-around;
+    align-items: center;
+
+}
+
+#ttd{
+    color: black;
+    text-rendering:auto;
 }
